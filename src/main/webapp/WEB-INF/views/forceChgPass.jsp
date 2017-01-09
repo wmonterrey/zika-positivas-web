@@ -121,11 +121,11 @@
 <script src="${pwStrength}" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <c:choose>
-	<c:when test="${cookie.zikaLang.value == null}">
+	<c:when test="${cookie.zikaPosLang.value == null}">
 		<c:set var="lenguaje" value="es"/>
 	</c:when>
 	<c:otherwise>
-		<c:set var="lenguaje" value="${cookie.zikaLang.value}"/>
+		<c:set var="lenguaje" value="${cookie.zikaPosLang.value}"/>
 	</c:otherwise>
 </c:choose>
 <!-- BEGIN PAGE LEVEL SCRIPTS -->

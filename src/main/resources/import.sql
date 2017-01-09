@@ -5,6 +5,8 @@ INSERT INTO `roles` (`ROL`) VALUES ('ROLE_QC');
 INSERT INTO `centers` (`CS`) VALUES ('Socrates Flores');
 INSERT INTO `centers` (`CS`) VALUES ('Francisco Buitrago');
 INSERT INTO `centers` (`CS`) VALUES ('Villa Libertad');
+INSERT INTO `centers` (`CS`) VALUES ('Edgard Lang');
+
 
 INSERT INTO `users` (`NOMBRE_USUARIO`, `CUENTA_SINEXPIRAR`, `CUENTA_SINBLOQUEAR`, `DESCRIPCION`, `FECHA_REGISTRO`, `USUARIO_REGISTRO`, `CREDENCIAL_SINEXPIRAR`, `CORREO_ELECTRONICO`, `HABILITADO`, `FECHA_ULTACC`, `FECHA_ULTMODCRED`, `FECHA_ULTMOD`, `USUARIO_ULTMOD`, `CONTRASENA`) VALUES ('admin', '', '', 'Administrador', '2014-09-20 08:31:00', 'admin', '', 'admincndr@minsa.gob.ni', '', '2014-11-16 10:05:40', NULL, '2014-11-13 17:58:06', 'admin', '6c36dc262b0e44be5811c2296669fc65643aec9dcaa4a76501e0a9508b633fd01ee59a207f8c6d68');
 INSERT INTO `users_roles` (`ROL`, `NOMBRE_USUARIO`, `PASIVO`, `FECHA_REGISTRO`, `USUARIO_REGISTRO`) VALUES ('ROLE_ADMIN', 'admin', '0', '2016-06-07 10:47:12', 'admin');
@@ -168,42 +170,42 @@ INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp05', '0', 'F
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp06', '0', 'Formulario Zp06 Parto');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp08', '0', 'Formulario Zp08 Salida del estudio');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('allforms', '0', 'Todos');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `en`, `catPasive`, `es`) VALUES ('form', 'Form', '0', 'Formulario');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `en`, `catPasive`, `es`) VALUES ('form', 'Form', '0', 'Formulario');
 INSERT INTO `messages` (`messageKey`, `en`, `catPasive`, `es`) VALUES ('event', 'Event', '0', 'Evento');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('subjectId.start', '0', 'Codigo de Inicio');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('subjectId.end', '0', 'Codigo de Fin');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('screening_arm_1', '0', 'Tamizaje');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('entry_arm_1', '0', 'Ingreso');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('4_week_post_entry_arm_1', '0', '4 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('8_week_post_entry_arm_1', '0', '8 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('12_week_post_entry_arm_1', '0', '12 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('16_week_post_entry_arm_1', '0', '16 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('20_week_post_entry_arm_1', '0', '20 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('24_week_post_entry_arm_1', '0', '24 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('28_week_post_entry_arm_1', '0', '28 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('32_week_post_entry_arm_1', '0', '32 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('36_week_post_entry_arm_1', '0', '36 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('40_week_post_entry_arm_1', '0', '40 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('44_week_post_entry_arm_1', '0', '44 Semanas');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('delivery_arm_1', '0', 'Parto');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('6_week_post_partum_arm_1', '0', 'Posparto');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1', '0', 'Visita no programada 1');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1b', '0', 'Visita no programada 2');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1c', '0', 'Visita no programada 3');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1d', '0', 'Visita no programada 4');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1e', '0', 'Visita no programada 5');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('study_exit_arm_1', '0', 'Salida del estudio');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('subjectId.start', '0', 'Codigo de Inicio');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('subjectId.end', '0', 'Codigo de Fin');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('screening_arm_1', '0', 'Tamizaje');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('entry_arm_1', '0', 'Ingreso');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('4_week_post_entry_arm_1', '0', '4 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('8_week_post_entry_arm_1', '0', '8 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('12_week_post_entry_arm_1', '0', '12 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('16_week_post_entry_arm_1', '0', '16 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('20_week_post_entry_arm_1', '0', '20 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('24_week_post_entry_arm_1', '0', '24 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('28_week_post_entry_arm_1', '0', '28 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('32_week_post_entry_arm_1', '0', '32 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('36_week_post_entry_arm_1', '0', '36 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('40_week_post_entry_arm_1', '0', '40 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('44_week_post_entry_arm_1', '0', '44 Semanas');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('delivery_arm_1', '0', 'Parto');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('6_week_post_partum_arm_1', '0', 'Posparto');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1', '0', 'Visita no programada 1');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1b', '0', 'Visita no programada 2');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1c', '0', 'Visita no programada 3');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1d', '0', 'Visita no programada 4');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_arm_1e', '0', 'Visita no programada 5');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('study_exit_arm_1', '0', 'Salida del estudio');
 
 /*query*/
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('consult', '0', 'Consultar');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('query.help', '0', 'Favor especifar cada columna en el SELECT, no usar *');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('run', '0', 'Ejecutar');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('consult', '0', 'Consultar');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('query.help', '0', 'Favor especifar cada columna en el SELECT, no usar *');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('run', '0', 'Ejecutar');
 /*etiquetas comunes*/
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('lbl.select', '0', 'Seleccione');
 /*entidades*/
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('class ni.org.ics.zip.domain.relationships.UserCenter', '0', 'Centro del usuario');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('class ni.org.ics.zip.users.model.UserSistema', '0', 'Usuario');
-INSERT INTO `zika_zip`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('class ni.org.ics.zip.users.model.Authority', '0', 'Rol del usuario');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('class ni.org.ics.zikapositivas.domain.relationships.UserCenter', '0', 'Centro del usuario');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('class ni.org.ics.zikapositivas.users.model.UserSistema', '0', 'Usuario');
+INSERT INTO `zika_positivas`.`messages` (`messageKey`, `catPasive`, `es`) VALUES ('class ni.org.ics.zikapositivas.users.model.Authority', '0', 'Rol del usuario');
 /*Agenda*/
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('subjectId', '0', 'Codigo Participante');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('diary.registerdate', '0', 'Fecha Ingreso');
