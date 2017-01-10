@@ -43,7 +43,7 @@ public class Zp00Screening extends BaseMetaData implements Auditable{
     private String scrConsentD;
     private String scrConsentE;
     private String scrConsentF;
-    private String scrPreviousZip;
+    private String scrPreviousZikaPos;
     private String scrPreviousStudyId;
     private String scrPreStudyNa;
     private String scrReasonNot;
@@ -281,13 +281,13 @@ public class Zp00Screening extends BaseMetaData implements Auditable{
         this.scrConsentF = scrConsentF;
     }
 
-    @Column(name = "scr_previous_zip", nullable = true, length = 2)
-    public String getScrPreviousZip() {
-        return scrPreviousZip;
+    @Column(name = "scr_previous_zika_pos", nullable = true, length = 2)
+    public String getScrPreviousZikaPos() {
+        return scrPreviousZikaPos;
     }
 
-    public void setScrPreviousZip(String scrPreviousZip) {
-        this.scrPreviousZip = scrPreviousZip;
+    public void setScrPreviousZikaPos(String scrPreviousZikaPos) {
+        this.scrPreviousZikaPos = scrPreviousZikaPos;
     }
 
     @Column(name = "scr_previous_studyid", nullable = true)
