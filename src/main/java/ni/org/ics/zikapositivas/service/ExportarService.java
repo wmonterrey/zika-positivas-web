@@ -35,7 +35,7 @@ public class ExportarService {
 
     private static Connection getConnection() throws Exception{
         MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUser("zikazip");
+        dataSource.setUser("zikapos");
         dataSource.setPassword("jeKAQudi");
         dataSource.setServerName("localhost");
         dataSource.setPort(3306);

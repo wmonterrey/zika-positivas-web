@@ -92,8 +92,8 @@ INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'pass.updated'
 INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'password.repeat', 'Repita la contrasena','0');
 INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'Pattern.password.format', 'Al menos 8 caracteres combinando mayusculas, minusculas, numeros y caracteres especiales','0');
 /*Plantilla*/
-INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'heading', 'Estudio ZIP','0');
-INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'title', 'ZIP','0');
+INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'heading', 'Estudio Zika Positivas','0');
+INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'title', 'Zika Positivas','0');
 INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'footer', 'Instituto de Ciencias Sostenibles','0');
 /*pagina principal*/
 INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'dashboard', 'Panel de control','0');
@@ -272,5 +272,5 @@ INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('october', '0',
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('november', '0', 'Noviembre');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('december', '0', 'Diciembre');
 
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('screenxday', '0', 'Tamizajes por día');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('screenxday', '0', 'Tamizajes por dï¿½a');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('total', '0', 'Total');
