@@ -22,6 +22,7 @@ public class Zp00Screening extends BaseMetaData implements Auditable{
     private String preScreenId;
     private String redcapEventName;
     private Date scrVisitDate;
+    private String scrVerbalConsent;
     private String scrRemain;
     private Integer scrAge;
     private String scrAge15;
@@ -91,6 +92,11 @@ public class Zp00Screening extends BaseMetaData implements Auditable{
     public void setScrVisitDate(Date scrVisitDate) {
         this.scrVisitDate = scrVisitDate;
     }
+
+    @Column(name = "scr_verbal_consent", nullable = false)
+    public String getScrVerbalConsent() { return scrVerbalConsent; }
+
+    public void setScrVerbalConsent(String scrVerbalConsent) { this.scrVerbalConsent = scrVerbalConsent; }
 
     @Column(name = "scr_remain", nullable = false, length = 2)
     public String getScrRemain() {
