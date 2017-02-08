@@ -3,6 +3,7 @@ package ni.org.ics.zikapositivas.movil.controller;
 import ni.org.ics.zikapositivas.domain.ZpControlConsentimientosSalida;
 import ni.org.ics.zikapositivas.service.ZpControlConsentimientosSalidaService;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -24,10 +25,25 @@ import java.util.List;
 @RequestMapping("/movil/*")
 public class ZpControlConsentimientosSalidaController {
 
-    @Resource(name = "zpControlConsentimientosSalidaService")
+	@Resource(name = "zpControlConsentimientosSalidaService")
     private ZpControlConsentimientosSalidaService zpControlConsentimientosSalidaService;
     private static final Logger logger = LoggerFactory.getLogger(ZpControlConsentimientosSalidaController.class);
 
+    
+    /**
+     * Acepta una solicitud GET para JSON
+     * @return JSON
+     */
+    @RequestMapping(value = "zpSalidaCons", method = RequestMethod.GET, produces = "application/json")
+    public @ResponseBody
+    List<ZpControlConsentimientosSalida> getZpControlConsentimientosSalida() {
+        logger.info("Descargando toda la informacion de los datos de los formulario ZpControlConsentimientosSalida");
+        List<ZpControlConsentimientosSalida> mZpControlConsentimientosSalida = zpControlConsentimientosSalidaService.getZpControlConsentimientosSalida();
+        if (mZpControlConsentimientosSalida == null){
+            logger.debug("Nulo");
+        }
+        return mZpControlConsentimientosSalida;
+    }
 
     /**
      * Acepta una solicitud POST con un par�metro JSON

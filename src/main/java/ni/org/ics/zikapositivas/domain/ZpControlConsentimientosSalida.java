@@ -17,7 +17,7 @@ import ni.org.ics.zikapositivas.domain.audit.Auditable;
 @Table(name = "zp_cons_salida", catalog = "zika_positivas")
 public class ZpControlConsentimientosSalida extends BaseMetaData implements Auditable{
 
-    /**
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -34,7 +34,6 @@ public class ZpControlConsentimientosSalida extends BaseMetaData implements Audi
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
-	@Id
     @Column(name="fecha_salida", nullable = false)
 	public Date getFechaHoraSalida() {
 		return fechaHoraSalida;
@@ -58,7 +57,7 @@ public class ZpControlConsentimientosSalida extends BaseMetaData implements Audi
 	}
 	@Override
 	public boolean isFieldAuditable(String fieldname) {		
-		return false;
+		return true;
 	}
 	
 }

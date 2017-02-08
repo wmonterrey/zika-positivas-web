@@ -30,6 +30,21 @@ public class ZpControlConsentimientosRecepcionController {
 
 
     /**
+     * Acepta una solicitud GET para JSON
+     * @return JSON
+     */
+    @RequestMapping(value = "zpRecepcionCons", method = RequestMethod.GET, produces = "application/json")
+    public @ResponseBody
+    List<ZpControlConsentimientosRecepcion> getZpControlConsentimientosRecepcion() {
+        logger.info("Descargando toda la informacion de los datos de los formulario ZpControlConsentimientosRecepcion");
+        List<ZpControlConsentimientosRecepcion> mZpControlConsentimientosRecepcion = zpControlConsentimientosRecepcionService.getZpControlConsentimientosRecepcion();
+        if (mZpControlConsentimientosRecepcion == null){
+            logger.debug("Nulo");
+        }
+        return mZpControlConsentimientosRecepcion;
+    }
+
+    /**
      * Acepta una solicitud POST con un par�metro JSON
      * @param envio Objeto serializado de ZpControlConsentimientosRecepcion
      * @return String con el resultado
