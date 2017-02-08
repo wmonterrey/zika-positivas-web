@@ -125,6 +125,10 @@ public class Zp02dInfantBiospecimenCollection extends BaseMetaData implements Au
         return infantAddtVisitOther;
     }
 
+    public void setInfantAddtVisitOther(String infantAddtVisitOther) {
+        this.infantAddtVisitOther = infantAddtVisitOther;
+    }
+
     @Column(name = "infant_mat_bld_col", nullable = true, length = 1)
     public String getInfantMatBldCol() {
         return infantMatBldCol;
