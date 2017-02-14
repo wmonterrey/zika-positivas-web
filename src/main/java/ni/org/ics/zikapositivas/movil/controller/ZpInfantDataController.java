@@ -5,10 +5,7 @@ import ni.org.ics.zikapositivas.service.ZpInfantDataService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -26,6 +23,7 @@ public class ZpInfantDataController {
     private static final Logger logger = LoggerFactory.getLogger(ZpInfantDataController.class);
 
 
+
     /**
      * Acepta una solicitud GET para JSON
      * @return JSON
@@ -39,6 +37,21 @@ public class ZpInfantDataController {
             logger.debug("Nulo");
         }
         return zpInfantData;
+    }
+
+    /**
+     * Acepta una solicitud GET para JSON
+     * @return JSON
+     */
+    @RequestMapping(value = "zpInfants/{username}", method = RequestMethod.GET, produces = "application/json")
+    public @ResponseBody
+    List<ZpInfantData> getZpInfantsData(@PathVariable String username) {
+        logger.info("Descargando toda la informacion de los datos de los formulario ZpInfantData el usuario " +username);
+        List<ZpInfantData> zpInfantsDataByUser = zpInfantDataService.getZpInfantsDataByUser(username);
+        if (zpInfantsDataByUser == null){
+            logger.debug("Nulo");
+        }
+        return zpInfantsDataByUser;
     }
 
     /**

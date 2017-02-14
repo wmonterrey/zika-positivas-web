@@ -29,6 +29,23 @@ public class ZpControlReporteUSSalidaController {
 
 
     /**
+     * Acepta una solicitud GET para JSON
+     * @return JSON
+     */
+    @RequestMapping(value = "zpSalidaUS", method = RequestMethod.GET, produces = "application/json")
+    public @ResponseBody
+    List<ZpControlReporteUSSalida> getZpControlReporteUSSalida() {
+        logger.info("Descargando toda la informacion de los datos de los formulario ZpControlReporteUSSalida");
+        List<ZpControlReporteUSSalida> mZpControlReporteUSSalida = zpControlReporteUSSalidaService.getZpControlReporteUSSalida();
+        if (mZpControlReporteUSSalida == null){
+            logger.debug("Nulo");
+        }
+        return mZpControlReporteUSSalida;
+    }
+
+
+
+    /**
      * Acepta una solicitud POST con un par�metro JSON
      * @param envio Objeto serializado de ZpControlReporteUSSalida
      * @return String con el resultado
