@@ -12,13 +12,13 @@
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-<jsp:include page="../fragments/headTag.jsp" />
-<!-- BEGIN PAGE LEVEL STYLES -->
-<spring:url value="/resources/plugins/select2/select2_conquer.css" var="sel2css" />
-<link rel="stylesheet" type="text/css" href="${sel2css}"/>
-<spring:url value="/resources/plugins/jquery-multi-select/css/multi-select.css" var="jqmscss" />
-<link rel="stylesheet" type="text/css" href="${jqmscss}"/>
-<!-- END PAGE LEVEL STYLES -->
+    <jsp:include page="../fragments/headTag.jsp" />
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <spring:url value="/resources/plugins/select2/select2_conquer.css" var="sel2css" />
+    <link rel="stylesheet" type="text/css" href="${sel2css}"/>
+    <spring:url value="/resources/plugins/jquery-multi-select/css/multi-select.css" var="jqmscss" />
+    <link rel="stylesheet" type="text/css" href="${jqmscss}"/>
+    <!-- END PAGE LEVEL STYLES -->
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -28,146 +28,148 @@
 <!-- END HEADER -->
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
-<jsp:include page="../fragments/bodyNavigation.jsp" />
-<!-- BEGIN CONTENT -->
-<div class="page-content-wrapper">
-	<div class="page-content-wrapper">
-		<div class="page-content">
-			<!-- BEGIN STYLE CUSTOMIZER -->
-			<jsp:include page="../fragments/bodyCustomizer.jsp" />
-			<!-- BEGIN PAGE HEADER-->
-			<div class="row">
-				<div class="col-md-12">
-					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
-					<h3 class="page-title">
-					<spring:message code="title" /> <small><spring:message code="export" /></small>
-					</h3>
-					<ul class="page-breadcrumb breadcrumb">
-						<li>
-							<i class="fa fa-home"></i>
-							<a href="<spring:url value="/" htmlEscape="true "/>"><spring:message code="home" /></a>
-                            <i class="fa fa-angle-right"></i> <a href="<spring:url value="/admin/export/" htmlEscape="true "/>"><spring:message code="export" /></a>
-						</li>
-					</ul>
-					<!-- END PAGE TITLE & BREADCRUMB-->
-				</div>
-			</div>
-			<!-- END PAGE HEADER-->
-			<!-- BEGIN PAGE CONTENT-->
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- BEGIN TABLE PORTLET-->
-                    <div class="portlet">
-                        <div class="portlet-title">
-                            <div class="caption">
-                                <i class="fa fa-list"></i>
-                            </div>
-                            <div class="tools">
-                                <a href="javascript:;" class="collapse"></a>
-                                <a href="javascript:;" class="remove"></a>
-                            </div>
-                        </div>
-                        <div class="portlet-body form">
-                            <form action="#" autocomplete="off" id="download-form" class="form-horizontal">
-                                <div class="form-body">
-                                    <div class="alert alert-danger display-hide">
-                                        <button class="close" data-close="alert"></button>
-                                        <spring:message code="form.errors" />
-                                    </div>
-                                    <div class="row">
-                                        <div class="col col-sm-12 col-md-6 col-lg-6">
-                                            <div class="form-group">
-                                                <label class="control-label col-md-4"><spring:message code="subjectId.start" />
-                                                </label>
-                                                <div class="col-md-6">
-                                                    <div class="input-group">
-                                                        <input id="codigoInicio" name="codigoInicio" type="text" value="" class="form-control"/>
-                                                            <span class="input-group-addon">
-                                                                <i class="fa fa-sort-alpha-asc"></i>
-                                                            </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-sm-12 col-md-6 col-lg-6">
-                                            <div class="form-group">
-                                                <label class="control-label col-md-4"><spring:message code="subjectId.end" />
-                                                </label>
-                                                <div class="col-md-6">
-                                                    <div class="input-group">
-                                                        <input id="codigoFin" name="codigoFin" type="text" value="" class="form-control"/>
-                                                            <span class="input-group-addon">
-                                                                <i class="fa fa-sort-alpha-asc"></i>
-                                                            </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col col-sm-12 col-md-6 col-lg-6">
-                                            <div class="form-group">
-                                                <label class="control-label col-md-4"><spring:message code="event" />
-                                                <span class="required">
-                                                     *
-                                                </span>
-                                                </label>
-                                                <div class="col-md-8">
-                                                    <select class="form-control" id="zpEvent" name="zpEvent">
-                                                        <option value=""><spring:message code="lbl.select" /> ...</option>
-                                                        <c:forEach items="${eventos}" var="evento">
-                                                            <option value="${evento}"><spring:message code="${evento}" /></option>
-                                                        </c:forEach>
-                                                        <option value="all"><spring:message code="allforms" /></option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-sm-12 col-md-6 col-lg-6">
-                                            <div class="form-group">
-                                                <label class="control-label col-md-4"><spring:message code="form" />
-                                                <span class="required">
-                                                     *
-                                                </span>
-                                                </label>
-                                                <div class="col-md-8">
-                                                    <select class="form-control" id="zpform" name="zpform">
-                                                        <option value=""><spring:message code="lbl.select" /> ...</option>
-                                                        <option value="Zp00"><spring:message code="zp00" /></option>
-                                                        <option value="Zp01AD"><spring:message code="zp01AD" /></option>
-                                                        <option value="Zp01E"><spring:message code="zp01E" /></option>
-                                                        <option value="Zp01FK"><spring:message code="zp01FK" /></option>
-                                                        <option value="Zp02"><spring:message code="zp02" /></option>
-                                                        <option value="Zp03"><spring:message code="zp03" /></option>
-                                                        <option value="Zp04AD"><spring:message code="zp04AD" /></option>
-                                                        <option value="Zp04E"><spring:message code="zp04E" /></option>
-                                                        <option value="Zp04FH"><spring:message code="zp04FH" /></option>
-                                                        <option value="Zp05"><spring:message code="zp05" /></option>
-                                                        <option value="Zp06"><spring:message code="zp06" /></option>
-                                                        <option value="Zp08"><spring:message code="zp08" /></option>
-                                                        <option value="all"><spring:message code="allforms" /></option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-actions fluid">
-                                    <div class="col-md-offset-6 col-md-6">
-                                        <button id="guardar" type="submit" class="btn btn-success"><spring:message code="download" /></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+    <jsp:include page="../fragments/bodyNavigation.jsp" />
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content-wrapper">
+            <div class="page-content">
+                <!-- BEGIN STYLE CUSTOMIZER -->
+                <jsp:include page="../fragments/bodyCustomizer.jsp" />
+                <!-- BEGIN PAGE HEADER-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                        <h3 class="page-title">
+                            <spring:message code="title" /> <small><spring:message code="export" /></small>
+                        </h3>
+                        <ul class="page-breadcrumb breadcrumb">
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <a href="<spring:url value="/" htmlEscape="true "/>"><spring:message code="home" /></a>
+                                <i class="fa fa-angle-right"></i> <a href="<spring:url value="/admin/export/" htmlEscape="true "/>"><spring:message code="export" /></a>
+                            </li>
+                        </ul>
+                        <!-- END PAGE TITLE & BREADCRUMB-->
                     </div>
-                    <!-- END TABLE PORTLET-->
                 </div>
+                <!-- END PAGE HEADER-->
+                <!-- BEGIN PAGE CONTENT-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BEGIN TABLE PORTLET-->
+                        <div class="portlet">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-list"></i>
+                                </div>
+                                <div class="tools">
+                                    <a href="javascript:;" class="collapse"></a>
+                                    <a href="javascript:;" class="remove"></a>
+                                </div>
+                            </div>
+                            <div class="portlet-body form">
+                                <form action="#" autocomplete="off" id="download-form" class="form-horizontal">
+                                    <div class="form-body">
+                                        <div class="alert alert-danger display-hide">
+                                            <button class="close" data-close="alert"></button>
+                                            <spring:message code="form.errors" />
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-sm-12 col-md-6 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4"><spring:message code="subjectId.start" />
+                                                    </label>
+                                                    <div class="col-md-6">
+                                                        <div class="input-group">
+                                                            <input id="codigoInicio" name="codigoInicio" type="text" value="" class="form-control"/>
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-sort-alpha-asc"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-sm-12 col-md-6 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4"><spring:message code="subjectId.end" />
+                                                    </label>
+                                                    <div class="col-md-6">
+                                                        <div class="input-group">
+                                                            <input id="codigoFin" name="codigoFin" type="text" value="" class="form-control"/>
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-sort-alpha-asc"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-sm-12 col-md-6 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4"><spring:message code="event" />
+                                                <span class="required">
+                                                     *
+                                                </span>
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <select class="form-control" id="zpEvent" name="zpEvent">
+                                                            <option value=""><spring:message code="lbl.select" /> ...</option>
+                                                            <c:forEach items="${eventos}" var="evento">
+                                                                <option value="${evento}"><spring:message code="${evento}" /></option>
+                                                            </c:forEach>
+                                                            <option value="all"><spring:message code="allforms" /></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-sm-12 col-md-6 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4"><spring:message code="form" />
+                                                <span class="required">
+                                                     *
+                                                </span>
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <select class="form-control" id="zpform" name="zpform">
+                                                            <option value=""><spring:message code="lbl.select" /> ...</option>
+                                                            <option value="Zp00"><spring:message code="zp00" /></option>
+                                                            <option value="Zp01AD"><spring:message code="zp01AD" /></option>
+                                                            <option value="Zp01E"><spring:message code="zp01E" /></option>
+                                                            <option value="Zp01FK"><spring:message code="zp01FK" /></option>
+                                                            <option value="Zp02"><spring:message code="zp02" /></option>
+                                                            <option value="Zp03"><spring:message code="zp03" /></option>
+                                                            <option value="Zp04AD"><spring:message code="zp04AD" /></option>
+                                                            <option value="Zp04E"><spring:message code="zp04E" /></option>
+                                                            <option value="Zp04FH"><spring:message code="zp04FH" /></option>
+                                                            <option value="Zp05"><spring:message code="zp05" /></option>
+                                                            <option value="Zp06"><spring:message code="zp06" /></option>
+                                                            <option value="Zp08"><spring:message code="zp08" /></option>
+                                                            <option value="Zp07"><spring:message code="zp07" /></option>
+                                                            <option value="Zp02d"><spring:message code="zp02d" /></option>
+                                                            <option value="all"><spring:message code="allforms" /></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions fluid">
+                                        <div class="col-md-offset-6 col-md-6">
+                                            <button id="guardar" type="submit" class="btn btn-success"><spring:message code="download" /></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- END TABLE PORTLET-->
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT -->
             </div>
-			<!-- END PAGE CONTENT -->
-		</div>
-	</div>
-</div>
-<!-- END CONTENT -->
+        </div>
+    </div>
+    <!-- END CONTENT -->
 </div>
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
@@ -245,7 +247,8 @@
 <spring:url value="/admin/export/getZp06"	var="getZp06"/>
 <spring:url value="/admin/export/getZp08"	var="getZp08"/>
 <spring:url value="/admin/export/getAll"	var="getAll"/>
-
+<spring:url value="/admin/export/getZp07"	var="getZp07"/>
+<spring:url value="/admin/export/getZp02d"	var="getZp02d"/>
 
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
@@ -255,9 +258,9 @@
     });
 </script>
 <script>
-	jQuery(document).ready(function() {
-		App.init();
-		var parametros = {getZp00 : "${getZp00}",
+    jQuery(document).ready(function() {
+        App.init();
+        var parametros = {getZp00 : "${getZp00}",
             getZp01AD : "${getZp01AD}",
             getZp01E : "${getZp01E}",
             getZp01FK : "${getZp01FK}",
@@ -269,11 +272,13 @@
             getZp06 : "${getZp06}",
             getZp05 : "${getZp05}",
             getZp08 : "${getZp08}",
+            getZp07 : "${getZp07}",
+            getZp02d : "${getZp02d}",
             getAll : "${getAll}"
         };
 
         Export.init(parametros);
-	});
+    });
 </script>
 <!-- END JAVASCRIPTS -->
 </body>
