@@ -46,7 +46,7 @@ public class EditarDatosController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String obtenerUsuarios(Model model) throws ParseException, Exception {
         logger.debug("Pantalla de inicio editar datos de formularios JSP");
-        List<String> eventos = exportarService.getRedCapEvents();
+        List<String> eventos = exportarService.getCompleteRedCapEvents();
         List<String> nose = editarDatosService.getTableMetaData(Constants.TABLE_ZP00);
         model.addAttribute("eventos",eventos);
         model.addAttribute("nose",nose);
