@@ -22,6 +22,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
     private String redcapEventName;
     private Date infantVisitDate;
     private String infantStatus;
+    private Date infantDeathDt;
     private String infantVisit;
     private Float infantTemp;
     private String infantTmpUnit;
@@ -234,6 +235,15 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
 
     public void setInfantStatus(String infantStatus) {
         this.infantStatus = infantStatus;
+    }
+
+    @Column(name = "infant_death_dt", nullable = true)
+    public Date getInfantDeathDt() {
+        return infantDeathDt;
+    }
+
+    public void setInfantDeathDt(Date infantDeathDt) {
+        this.infantDeathDt = infantDeathDt;
     }
 
     @Column(name = "infant_visit", nullable = true, length = 1)
@@ -478,7 +488,6 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
     public void setInfantOphthAbno(String infantOphthAbno) {
         this.infantOphthAbno = infantOphthAbno;
     }
-
 
     @Column(name = "infant_oae", nullable = true, length = 2)
     public String getInfantOae() {
@@ -731,7 +740,6 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
     public void setInfantCgRisk(String infantCgRisk) {
         this.infantCgRisk = infantCgRisk;
     }
-
 
     @Column(name = "infant_rp_score", nullable = true)
     public Float getInfantRpScore() {
@@ -1372,7 +1380,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantIdCompleting = infantIdCompleting;
     }
 
-    @Column(name = "infant_date_completed", nullable = true)
+    @Column(name = "infant_dt_comp", nullable = true)
     public Date getInfantDtComp() {
         return infantDtComp;
     }
@@ -1390,7 +1398,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantIdReviewer = infantIdReviewer;
     }
 
-    @Column(name = "infant_date_reviewed", nullable = true)
+    @Column(name = "infant_dt_review", nullable = true)
     public Date getInfantDtReview() {
         return infantDtReview;
     }
@@ -1416,8 +1424,6 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
     public void setInfantDtEnter(Date infantDtEnter) {
         this.infantDtEnter = infantDtEnter;
     }
-
-
 
 
 
