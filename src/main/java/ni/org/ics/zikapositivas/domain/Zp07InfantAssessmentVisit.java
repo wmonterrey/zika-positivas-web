@@ -24,6 +24,14 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
     private String infantStatus;
     private Date infantDeathDt;
     private String infantVisit;
+    private Date infantVisitDate2;
+    private String infantStatus2;
+    private Date infantDeathDt2;
+    private String infantVisit2;
+    private Date infantVisitDate3;
+    private String infantStatus3;
+    private Date infantDeathDt3;
+    private String infantVisit3;
     private Float infantTemp;
     private String infantTmpUnit;
     private Float infantWt;
@@ -148,12 +156,33 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
     private String infantOtherLab; //nuevo
     private String infantCommentsYn; //nuevo
     private String infantComments2; //nuevo
+    private String infantCommentsYn2; //nuevo
+    private String infantComments2_2; //nuevo
+    private String infantCommentsYn3; //nuevo
+    private String infantComments2_3; //nuevo
     private String infantIdCompleting;
     private Date infantDtComp; //cambio nombre
     private String infantIdReviewer;
     private Date infantDtReview; //cambio nombre
     private String infantIdDataEntry;
     private Date infantDtEnter; //cambio nombre
+    private String infantIdCompleting2;
+    private Date infantDtComp2; //cambio nombre
+    private String infantIdReviewer2;
+    private Date infantDtReview2; //cambio nombre
+    private String infantIdDataEntry2;
+    private Date infantDtEnter2; //cambio nombre
+    private String infantIdCompleting3;
+    private Date infantDtComp3; //cambio nombre
+    private String infantIdReviewer3;
+    private Date infantDtReview3; //cambio nombre
+    private String infantIdDataEntry3;
+    private Date infantDtEnter3; //cambio nombre
+    private Integer part1;
+    private Integer part2;
+    private Integer part3;
+    private Integer idInstancia2;
+    private Integer idInstancia3;
 
 
    /* private String infantOtherSpecify;
@@ -219,7 +248,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.redcapEventName = redcapEventName;
     }
 
-    @Column(name = "infant_visit_date", nullable = true)
+    @Column(name = "infant_visit_date")
     public Date getInfantVisitDate() {
         return infantVisitDate;
     }
@@ -228,7 +257,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantVisitDate = infantVisitDate;
     }
 
-    @Column(name = "infant_status", nullable = true, length = 1)
+    @Column(name = "infant_status", length = 1)
     public String getInfantStatus() {
         return infantStatus;
     }
@@ -237,7 +266,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantStatus = infantStatus;
     }
 
-    @Column(name = "infant_death_dt", nullable = true)
+    @Column(name = "infant_death_dt")
     public Date getInfantDeathDt() {
         return infantDeathDt;
     }
@@ -246,7 +275,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantDeathDt = infantDeathDt;
     }
 
-    @Column(name = "infant_visit", nullable = true, length = 1)
+    @Column(name = "infant_visit", length = 1)
     public String getInfantVisit() {
         return infantVisit;
     }
@@ -255,7 +284,79 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantVisit = infantVisit;
     }
 
-    @Column(name = "infant_temp", nullable = true)
+    @Column(name = "infant_visit_date2", length = 1)
+    public Date getInfantVisitDate2() {
+        return infantVisitDate2;
+    }
+
+    public void setInfantVisitDate2(Date infantVisitDate2) {
+        this.infantVisitDate2 = infantVisitDate2;
+    }
+
+    @Column(name = "infant_status2", length = 1)
+    public String getInfantStatus2() {
+        return infantStatus2;
+    }
+
+    public void setInfantStatus2(String infantStatus2) {
+        this.infantStatus2 = infantStatus2;
+    }
+
+    @Column(name = "infant_death_dt2")
+    public Date getInfantDeathDt2() {
+        return infantDeathDt2;
+    }
+
+    public void setInfantDeathDt2(Date infantDeathDt2) {
+        this.infantDeathDt2 = infantDeathDt2;
+    }
+
+    @Column(name = "infant_visit2", length = 1)
+    public String getInfantVisit2() {
+        return infantVisit2;
+    }
+
+    public void setInfantVisit2(String infantVisit2) {
+        this.infantVisit2 = infantVisit2;
+    }
+
+    @Column(name = "infant_visit_date3", length = 1)
+    public Date getInfantVisitDate3() {
+        return infantVisitDate3;
+    }
+
+    public void setInfantVisitDate3(Date infantVisitDate3) {
+        this.infantVisitDate3 = infantVisitDate3;
+    }
+
+    @Column(name = "infant_status3", length = 1)
+    public String getInfantStatus3() {
+        return infantStatus3;
+    }
+
+    public void setInfantStatus3(String infantStatus3) {
+        this.infantStatus3 = infantStatus3;
+    }
+
+    @Column(name = "infant_death_dt3")
+    public Date getInfantDeathDt3() {
+        return infantDeathDt3;
+    }
+
+    public void setInfantDeathDt3(Date infantDeathDt3) {
+        this.infantDeathDt3 = infantDeathDt3;
+    }
+
+    @Column(name = "infant_visit3", length = 1)
+    public String getInfantVisit3() {
+        return infantVisit3;
+    }
+
+    public void setInfantVisit3(String infantVisit3) {
+        this.infantVisit3 = infantVisit3;
+    }
+
+    @Column(name = "infant_temp")
     public Float getInfantTemp() {
         return infantTemp;
     }
@@ -264,7 +365,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantTemp = infantTemp;
     }
 
-    @Column(name = "infant_tmp_unit", nullable = true, length = 1)
+    @Column(name = "infant_tmp_unit", length = 1)
     public String getInfantTmpUnit() {
         return infantTmpUnit;
     }
@@ -273,7 +374,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantTmpUnit = infantTmpUnit;
     }
 
-    @Column(name = "infant_wt", nullable = true)
+    @Column(name = "infant_wt")
     public Float getInfantWt() {
         return infantWt;
     }
@@ -282,7 +383,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantWt = infantWt;
     }
 
-    @Column(name = "infant_wt_unit", nullable = true, length = 1)
+    @Column(name = "infant_wt_unit", length = 1)
     public String getInfantWtUnit() {
         return infantWtUnit;
     }
@@ -291,7 +392,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantWtUnit = infantWtUnit;
     }
 
-    @Column(name = "infant_wt_percen", nullable = true)
+    @Column(name = "infant_wt_percen")
     public Float getInfantWtPercen() {
         return infantWtPercen;
     }
@@ -300,7 +401,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantWtPercen = infantWtPercen;
     }
 
-    @Column(name = "infant_wtpercen_na", nullable = true, length = 2)
+    @Column(name = "infant_wtpercen_na", length = 2)
     public String getInfantWtpercenNa() {
         return infantWtpercenNa;
     }
@@ -309,7 +410,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantWtpercenNa = infantWtpercenNa;
     }
 
-    @Column(name = "infant_length", nullable = true)
+    @Column(name = "infant_length")
     public Float getInfantLength() {
         return infantLength;
     }
@@ -318,7 +419,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantLength = infantLength;
     }
 
-    @Column(name = "infant_length_percen", nullable = true)
+    @Column(name = "infant_length_percen")
     public Float getInfantLengthPercen() {
         return infantLengthPercen;
     }
@@ -327,7 +428,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantLengthPercen = infantLengthPercen;
     }
 
-    @Column(name = "infant_lenpercen_na", nullable = true, length = 2)
+    @Column(name = "infant_lenpercen_na", length = 2)
     public String getInfantLenpercenNa() {
         return infantLenpercenNa;
     }
@@ -336,7 +437,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantLenpercenNa = infantLenpercenNa;
     }
 
-    @Column(name = "infant_headcircu", nullable = true)
+    @Column(name = "infant_headcircu")
     public Float getInfantHeadcircu() {
         return infantHeadcircu;
     }
@@ -345,7 +446,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantHeadcircu = infantHeadcircu;
     }
 
-    @Column(name = "infant_heapercen", nullable = true)
+    @Column(name = "infant_heapercen")
     public Float getInfantHeapercen() {
         return infantHeapercen;
     }
@@ -354,7 +455,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantHeapercen = infantHeapercen;
     }
 
-    @Column(name = "infant_heapercen_na", nullable = true, length = 2)
+    @Column(name = "infant_heapercen_na", length = 2)
     public String getInfantHeapercenNa() {
         return infantHeapercenNa;
     }
@@ -363,7 +464,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantHeapercenNa = infantHeapercenNa;
     }
 
-    @Column(name = "infant_heasize", nullable = false, length = 2)
+    @Column(name = "infant_heasize", length = 2)
     public String getInfantHeasize() {
         return infantHeasize;
     }
@@ -471,7 +572,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantOphth = infantOphth;
     }
 
-    @Column(name = "infant_ophth_type", nullable = false, length = 2)
+    @Column(name = "infant_ophth_type", length = 2)
     public String getInfantOphthType() {
         return infantOphthType;
     }
@@ -480,7 +581,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantOphthType = infantOphthType;
     }
 
-    @Column(name = "infant_ophth_abno", nullable = true, length = 2)
+    @Column(name = "infant_ophth_abno", length = 2)
     public String getInfantOphthAbno() {
         return infantOphthAbno;
     }
@@ -498,7 +599,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantOae = infantOae;
     }
 
-    @Column(name = "infant_hearing_test", nullable = false, length = 2)
+    @Column(name = "infant_hearing_test", length = 2)
     public String getInfantHearingTest() {
         return infantHearingTest;
     }
@@ -507,7 +608,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantHearingTest = infantHearingTest;
     }
 
-    @Column(name = "infant_hearing_overall", nullable = false, length = 2)
+    @Column(name = "infant_hearing_overall", length = 2)
     public String getInfantHearingOverall() {
         return infantHearingOverall;
     }
@@ -516,7 +617,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantHearingOverall = infantHearingOverall;
     }
 
-    @Column(name = "infant_roae", nullable = true, length = 2)
+    @Column(name = "infant_roae", length = 2)
     public String getInfantRoae() {
         return infantRoae;
     }
@@ -588,7 +689,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantNeurodeve = infantNeurodeve;
     }
 
-    @Column(name = "infant_exhibited", nullable = true, length = 25)
+    @Column(name = "infant_exhibited", nullable = true, length = 50)
     public String getInfantExhibited() {
         return infantExhibited;
     }
@@ -624,7 +725,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantExhibitOther = infantExhibitOther;
     }
 
-    @Column(name = "infant_microce", nullable = false, length = 2)
+    @Column(name = "infant_microce", length = 2)
     public String getInfantMicroce() {
         return infantMicroce;
     }
@@ -633,7 +734,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantMicroce = infantMicroce;
     }
 
-    @Column(name = "infant_definition", nullable = true, length = 50)
+    @Column(name = "infant_definition",  length = 50)
     public String getInfantDefinition() {
         return infantDefinition;
     }
@@ -642,7 +743,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantDefinition = infantDefinition;
     }
 
-    @Column(name = "infant_further_neuro", nullable = true, length = 2)
+    @Column(name = "infant_further_neuro", length = 2)
     public String getInfantFurtherNeuro() {
         return infantFurtherNeuro;
     }
@@ -651,7 +752,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantFurtherNeuro = infantFurtherNeuro;
     }
 
-    @Column(name = "infant_evaluation", nullable = false, length = 2)
+    @Column(name = "infant_evaluation", length = 2)
     public String getInfantEvaluation() {
         return infantEvaluation;
     }
@@ -840,7 +941,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantOtherScore = infantOtherScore;
     }
 
-    @Column(name = "infant_result_screening", nullable = false, length = 2)
+    @Column(name = "infant_result_screening", length = 2)
     public String getInfantResultScreening() {
         return infantResultScreening;
     }
@@ -849,7 +950,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantResultScreening = infantResultScreening;
     }
 
-    @Column(name = "infant_refer_testing", nullable = false, length = 2)
+    @Column(name = "infant_refer_testing", length = 2)
     public String getInfantReferTesting() {
         return infantReferTesting;
     }
@@ -858,7 +959,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantReferTesting = infantReferTesting;
     }
 
-    @Column(name = "infant_fever_symptom", nullable = false, length = 2)
+    @Column(name = "infant_fever_symptom", length = 2)
     public String getInfantFeverSymptom() {
         return infantFeverSymptom;
     }
@@ -867,7 +968,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantFeverSymptom = infantFeverSymptom;
     }
 
-    @Column(name = "infant_rash_symptom", nullable = false, length = 2)
+    @Column(name = "infant_rash_symptom", length = 2)
     public String getInfantRashSymptom() {
         return infantRashSymptom;
     }
@@ -876,7 +977,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantRashSymptom = infantRashSymptom;
     }
 
-    @Column(name = "infant_itch", nullable = false, length = 2)
+    @Column(name = "infant_itch", length = 2)
     public String getInfantItch() {
         return infantItch;
     }
@@ -885,7 +986,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantItch = infantItch;
     }
 
-    @Column(name = "infant_rash_first", nullable = false, length = 2)
+    @Column(name = "infant_rash_first", length = 2)
     public String getInfantRashFirst() {
         return infantRashFirst;
     }
@@ -939,7 +1040,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantRashSpread = infantRashSpread;
     }
 
-    @Column(name = "infant_spread_part", length = 2)
+    @Column(name = "infant_spread_part", length = 15)
     public String getInfantSpreadPart() {
         return infantSpreadPart;
     }
@@ -948,7 +1049,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantSpreadPart = infantSpreadPart;
     }
 
-    @Column(name = "infant_fever_experience", nullable = false, length = 2)
+    @Column(name = "infant_fever_experience", length = 2)
     public String getInfantFeverExperience() {
         return infantFeverExperience;
     }
@@ -957,7 +1058,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantFeverExperience = infantFeverExperience;
     }
 
-    @Column(name = "infant_temp_measure", nullable = false, length = 2)
+    @Column(name = "infant_temp_measure", length = 2)
     public String getInfantTempMeasure() {
         return infantTempMeasure;
     }
@@ -1029,7 +1130,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantFeverDur = infantFeverDur;
     }
 
-    @Column(name = "infant_redeyes", nullable = false, length = 2)
+    @Column(name = "infant_redeyes", length = 2)
     public String getInfantRedeyes() {
         return infantRedeyes;
     }
@@ -1074,7 +1175,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantRedeyesDur = infantRedeyesDur;
     }
 
-    @Column(name = "infant_joint", nullable = false, length = 2)
+    @Column(name = "infant_joint", length = 2)
     public String getInfantJoint() {
         return infantJoint;
     }
@@ -1119,7 +1220,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantJointDur = infantJointDur;
     }
 
-    @Column(name = "infant_headache", nullable = false, length = 2)
+    @Column(name = "infant_headache", length = 2)
     public String getInfantHeadache() {
         return infantHeadache;
     }
@@ -1164,7 +1265,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantHeadaDur = infantHeadaDur;
     }
 
-    @Column(name = "infant_symptom_other", nullable = false, length = 2)
+    @Column(name = "infant_symptom_other", length = 2)
     public String getInfantSymptomOther() {
         return infantSymptomOther;
     }
@@ -1173,7 +1274,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantSymptomOther = infantSymptomOther;
     }
 
-    @Column(name = "infant_specify_symptom", length = 2)
+    @Column(name = "infant_specify_symptom", length = 50)
     public String getInfantSpecifySymptom() {
         return infantSpecifySymptom;
     }
@@ -1254,7 +1355,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantHospital = infantHospital;
     }
 
-    @Column(name = "infant_diag_rubella", nullable = false, length = 2)
+    @Column(name = "infant_diag_rubella", length = 2)
     public String getInfantDiagRubella() {
         return infantDiagRubella;
     }
@@ -1263,7 +1364,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantDiagRubella = infantDiagRubella;
     }
 
-    @Column(name = "infant_diag_dengue", nullable = false, length = 2)
+    @Column(name = "infant_diag_dengue", length = 2)
     public String getInfantDiagDengue() {
         return infantDiagDengue;
     }
@@ -1272,7 +1373,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantDiagDengue = infantDiagDengue;
     }
 
-    @Column(name = "infant_diag_chikung", nullable = false, length = 2)
+    @Column(name = "infant_diag_chikung", length = 2)
     public String getInfantDiagChikung() {
         return infantDiagChikung;
     }
@@ -1281,7 +1382,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantDiagChikung = infantDiagChikung;
     }
 
-    @Column(name = "infant_diag_zika", nullable = false, length = 2)
+    @Column(name = "infant_diag_zika", length = 2)
     public String getInfantDiagZika() {
         return infantDiagZika;
     }
@@ -1290,7 +1391,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantDiagZika = infantDiagZika;
     }
 
-    @Column(name = "infant_diag_cytome", nullable = false, length = 2)
+    @Column(name = "infant_diag_cytome", length = 2)
     public String getInfantDiagCytome() {
         return infantDiagCytome;
     }
@@ -1299,7 +1400,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantDiagCytome = infantDiagCytome;
     }
 
-    @Column(name = "infant_medicine", nullable = false, length = 2)
+    @Column(name = "infant_medicine", length = 2)
     public String getInfantMedicine() {
         return infantMedicine;
     }
@@ -1317,7 +1418,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantMedName = infantMedName;
     }
 
-    @Column(name = "infant_sp_diary", nullable = false, length = 2)
+    @Column(name = "infant_sp_diary", length = 2)
     public String getInfantSpDiary() {
         return infantSpDiary;
     }
@@ -1326,7 +1427,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantSpDiary = infantSpDiary;
     }
 
-    @Column(name = "infant_pre_results", nullable = false, length = 2)
+    @Column(name = "infant_pre_results", length = 2)
     public String getInfantPreResults() {
         return infantPreResults;
     }
@@ -1335,7 +1436,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantPreResults = infantPreResults;
     }
 
-    @Column(name = "infant_referr", nullable = false, length = 2)
+    @Column(name = "infant_referr", length = 2)
     public String getInfantReferr() {
         return infantReferr;
     }
@@ -1344,7 +1445,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantReferr = infantReferr;
     }
 
-    @Column(name = "infant_other_lab", nullable = false, length = 2)
+    @Column(name = "infant_other_lab", length = 2)
     public String getInfantOtherLab() {
         return infantOtherLab;
     }
@@ -1353,7 +1454,7 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantOtherLab = infantOtherLab;
     }
 
-    @Column(name = "infant_comments_yn", nullable = false, length = 2)
+    @Column(name = "infant_comments_yn",  length = 2)
     public String getInfantCommentsYn() {
         return infantCommentsYn;
     }
@@ -1369,6 +1470,42 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
 
     public void setInfantComments2(String infantComments2) {
         this.infantComments2 = infantComments2;
+    }
+
+    @Column(name = "infant_comments_yn2",  length = 2)
+    public String getInfantCommentsYn2() {
+        return infantCommentsYn2;
+    }
+
+    public void setInfantCommentsYn2(String infantCommentsYn2) {
+        this.infantCommentsYn2 = infantCommentsYn2;
+    }
+
+    @Column(name = "infant_comments_yn2_2", length = 100)
+    public String getInfantComments2_2() {
+        return infantComments2_2;
+    }
+
+    public void setInfantComments2_2(String infantComments2_2) {
+        this.infantComments2_2 = infantComments2_2;
+    }
+
+    @Column(name = "infant_comments_yn3", length = 2)
+    public String getInfantCommentsYn3() {
+        return infantCommentsYn3;
+    }
+
+    public void setInfantCommentsYn3(String infantCommentsYn3) {
+        this.infantCommentsYn3 = infantCommentsYn3;
+    }
+
+    @Column(name = "infant_comments_yn2_3", length = 100)
+    public String getInfantComments2_3() {
+        return infantComments2_3;
+    }
+
+    public void setInfantComments2_3(String infantComments2_3) {
+        this.infantComments2_3 = infantComments2_3;
     }
 
     @Column(name = "infant_id_completing", nullable = true, length = 50)
@@ -1425,9 +1562,160 @@ public class Zp07InfantAssessmentVisit extends BaseMetaData implements Auditable
         this.infantDtEnter = infantDtEnter;
     }
 
+    @Column(name = "infant_id_completing2", nullable = true, length = 50)
+    public String getInfantIdCompleting2() {
+        return infantIdCompleting2;
+    }
+
+    public void setInfantIdCompleting2(String infantIdCompleting2) {
+        this.infantIdCompleting2 = infantIdCompleting2;
+    }
+    @Column(name = "infant_dt_comp2", nullable = true)
+    public Date getInfantDtComp2() {
+        return infantDtComp2;
+    }
+
+    public void setInfantDtComp2(Date infantDtComp2) {
+        this.infantDtComp2 = infantDtComp2;
+    }
+
+    @Column(name = "infant_id_reviewer2", nullable = true, length = 50)
+    public String getInfantIdReviewer2() {
+        return infantIdReviewer2;
+    }
+
+    public void setInfantIdReviewer2(String infantIdReviewer2) {
+        this.infantIdReviewer2 = infantIdReviewer2;
+    }
+
+    @Column(name = "infant_dt_review2", nullable = true)
+    public Date getInfantDtReview2() {
+        return infantDtReview2;
+    }
+
+    public void setInfantDtReview2(Date infantDtReview2) {
+        this.infantDtReview2 = infantDtReview2;
+    }
+
+    @Column(name = "infant_id_data_entry2", nullable = true, length = 50)
+    public String getInfantIdDataEntry2() {
+        return infantIdDataEntry2;
+    }
+
+    public void setInfantIdDataEntry2(String infantIdDataEntry2) {
+        this.infantIdDataEntry2 = infantIdDataEntry2;
+    }
+
+    @Column(name = "infant_dt_enter2", nullable = true)
+    public Date getInfantDtEnter2() {
+        return infantDtEnter2;
+    }
+
+    public void setInfantDtEnter2(Date infantDtEnter2) {
+        this.infantDtEnter2 = infantDtEnter2;
+    }
+
+    @Column(name = "infant_id_completing3", nullable = true, length = 50)
+    public String getInfantIdCompleting3() {
+        return infantIdCompleting3;
+    }
+
+    public void setInfantIdCompleting3(String infantIdCompleting3) {
+        this.infantIdCompleting3 = infantIdCompleting3;
+    }
+
+    @Column(name = "infant_dt_comp3", nullable = true)
+    public Date getInfantDtComp3() {
+        return infantDtComp3;
+    }
+
+    public void setInfantDtComp3(Date infantDtComp3) {
+        this.infantDtComp3 = infantDtComp3;
+    }
+
+    @Column(name = "infant_id_reviewer3", nullable = true, length = 50)
+    public String getInfantIdReviewer3() {
+        return infantIdReviewer3;
+    }
+
+    public void setInfantIdReviewer3(String infantIdReviewer3) {
+        this.infantIdReviewer3 = infantIdReviewer3;
+    }
+
+    @Column(name = "infant_dt_review3", nullable = true)
+    public Date getInfantDtReview3() {
+        return infantDtReview3;
+    }
+
+    public void setInfantDtReview3(Date infantDtReview3) {
+        this.infantDtReview3 = infantDtReview3;
+    }
+
+    @Column(name = "infant_id_data_entry3", nullable = true, length = 50)
+    public String getInfantIdDataEntry3() {
+        return infantIdDataEntry3;
+    }
+
+    public void setInfantIdDataEntry3(String infantIdDataEntry3) {
+        this.infantIdDataEntry3 = infantIdDataEntry3;
+    }
+
+    @Column(name = "infant_dt_enter3", nullable = true)
+    public Date getInfantDtEnter3() {
+        return infantDtEnter3;
+    }
+
+    public void setInfantDtEnter3(Date infantDtEnter3) {
+        this.infantDtEnter3 = infantDtEnter3;
+    }
+
+    @Column(name = "part1")
+    public Integer getPart1() {
+        return part1;
+    }
+
+    public void setPart1(Integer part1) {
+        this.part1 = part1;
+    }
+
+    @Column(name = "part2")
+    public Integer getPart2() {
+        return part2;
+    }
+
+    public void setPart2(Integer part2) {
+        this.part2 = part2;
+    }
 
 
-    /*
+    @Column(name = "part3")
+    public Integer getPart3() {
+        return part3;
+    }
+
+    public void setPart3(Integer part3) {
+        this.part3 = part3;
+    }
+
+    @Column(name = "id_instancia2")
+    public Integer getIdInstancia2() {
+        return idInstancia2;
+    }
+
+    public void setIdInstancia2(Integer idInstancia2) {
+        this.idInstancia2 = idInstancia2;
+    }
+
+    @Column(name = "id_instancia3")
+    public Integer getIdInstancia3() {
+        return idInstancia3;
+    }
+
+    public void setIdInstancia3(Integer idInstancia3) {
+        this.idInstancia3 = idInstancia3;
+    }
+
+/*
     @Column(name = "infant_which_eye", nullable = true, length = 4)
     public String getInfantWhichEye() {
         return infantWhichEye;
