@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * Servicio para el objeto Zp01StudyEntrySectionFtoK
- * Contiene la información del formulario Zp01StudyEntry desde la sección F a la K
+ * Contiene la informaciï¿½n del formulario Zp01StudyEntry desde la seccion F a la K
  * Created by FIRSTICT on 10/11/2016.
  * V1.0
  */

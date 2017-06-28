@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * Servicio para el objeto Zp01StudyEntrySectionE
- * Contiene la información de la sección E del formulario Zp01StudyEntry
+ * Contiene la informaciï¿½n de la seccion E del formulario Zp01StudyEntry
  * Created by FIRSTICT on 10/11/2016.
  * V1.0
  */
@@ -24,7 +24,7 @@ public class Zp01StudyEntrySectionEService {
     private SessionFactory sessionFactory;
 
     /**
-     * Retorna todos los formularios Zp01StudyEntry Sección E
+     * Retorna todos los formularios Zp01StudyEntry Secciï¿½n E
      * @return una lista de Zp01StudyEntrySectionE
      */
     @SuppressWarnings("unchecked")
@@ -35,7 +35,7 @@ public class Zp01StudyEntrySectionEService {
     }
     
     /**
-     * Retorna todos los formularios Zp01StudyEntry Sección E
+     * Retorna todos los formularios Zp01StudyEntry Secciï¿½n E
      * @return una lista de Zp01StudyEntrySectionE
      */
     @SuppressWarnings("unchecked")
@@ -48,7 +48,7 @@ public class Zp01StudyEntrySectionEService {
     }
 
     /**
-     * Retorna un formulario Zp01StudyEntry Sección E
+     * Retorna un formulario Zp01StudyEntry Secciï¿½n E
      * @param recordId del Zp01StudyEntrySectionE a retornar
      * @return un Zp01StudyEntrySectionE
      */
@@ -60,7 +60,7 @@ public class Zp01StudyEntrySectionEService {
     }
 
     /**
-     * Guardar un formulario Zp01StudyEntry Sección E
+     * Guardar un formulario Zp01StudyEntry Secciï¿½n E
      * @param zp01StudyEntrySectionE a guardar
      */
     public void saveZp01StudyEntrySectionE(Zp01StudyEntrySectionE zp01StudyEntrySectionE){
