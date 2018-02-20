@@ -42,7 +42,7 @@ public class Zp00ScreeningService {
     public List<Zp00Screening> getZp00ScreeningByUser(String username){
         Session session = sessionFactory.getCurrentSession();
         Query query = session.createQuery("FROM Zp00Screening zp00 where zp00.pasive = '0' and zp00.preScreenId in (select recId from ZpPreScreening zpPre where zpPre.pasive = '0' and zpPre.cs in " +
-        		"(Select uc.centro.cs from UserCenter uc where uc.user.username =:usuarioactual and uc.pasive = '0'))");
+                "(Select uc.centro.cs from UserCenter uc where uc.user.username =:usuarioactual and uc.pasive = '0'))");
         query.setParameter("usuarioactual",username);
         return query.list();
     }
